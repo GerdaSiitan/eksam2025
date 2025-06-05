@@ -2,9 +2,108 @@
 {% block content %}
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+</head>
 <body class="bg-primary">
 
+<!-- NAVBAR -->
+<nav id="main-nav" class="fixed top-0 left-0 w-full bg-transparent text-white transition-all duration-300 z-50">
+  <div class="max-w-[1450px] w-full mx-auto px-6 md:px-14 flex items-center justify-between h-24">
+    <img id="nav-logo" src="/RAWA-TUULIK-LOGO.svg" class="md:h-40 h-32 transition-all duration-300">
+
+    <ul class="hidden lg:flex space-x-9 font-medium items-center text-sm" id="nav-links">
+      <li><a href="/">AVALEHT</a></li>
+      <li><a href="/merch.html">E-POOD</a></li>
+      <li><a href="/contact.html">KONTAKT</a></li>
+    </ul>
+
+    <div class="hidden lg:flex items-center space-x-4" id="nav-buttons">
+      <a href="/annetus.html"
+         class="border-2 border-white text-white rounded-full px-6 py-2 hover:bg-orange-600 hover:text-white transition text-sm font-semibold"
+         id="donate-btn">
+        OLE ABIKS!
+      </a>
+      <button>
+        <img id="cart-icon" src="/CART.svg" class="h-6 md:h-7">
+      </button>
+    </div>
+
+    <button class="lg:hidden z-50" id="hamburger-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="h-6 w-6 text-white" viewBox="0 0 24 24" stroke="currentColor" id="hamburger-icon">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<script>
+  if (window.location.pathname === "/") {
+    const nav = document.getElementById("main-nav");
+    const navLinks = document.getElementById("nav-links");
+    const donateBtn = document.getElementById("donate-btn");
+    const cartIcon = document.getElementById("cart-icon");
+    const hamburgerIcon = document.getElementById("hamburger-icon");
+
+    const updateNav = () => {
+      if (window.scrollY > 10) {
+        nav.classList.add("bg-white", "shadow-md");
+        nav.classList.remove("bg-transparent");
+
+        donateBtn.classList.add("border-orange-600", "text-orange-600");
+        donateBtn.classList.remove("border-white", "text-white");
+
+        navLinks.querySelectorAll("a").forEach(link => {
+          link.classList.add("text-orange-600");
+          link.classList.remove("text-white");
+        });
+
+        hamburgerIcon.classList.add("text-orange-600");
+        hamburgerIcon.classList.remove("text-white");
+      } else {
+        nav.classList.remove("bg-white", "shadow-md");
+        nav.classList.add("bg-transparent");
+
+        donateBtn.classList.remove("border-orange-600", "text-orange-600");
+        donateBtn.classList.add("border-white", "text-white");
+
+        navLinks.querySelectorAll("a").forEach(link => {
+          link.classList.remove("text-orange-600");
+          link.classList.add("text-white");
+        });
+
+        hamburgerIcon.classList.remove("text-orange-600");
+        hamburgerIcon.classList.add("text-white");
+      }
+    };
+
+    window.addEventListener("scroll", updateNav);
+    document.addEventListener("DOMContentLoaded", updateNav);
+  }
+</script>
+
+<!-- HEADER SECTION -->
+<div class="relative w-full">
+  <img src="/header-pic.png" class="w-full h-[900px] md:mt-[-80px] object-cover">
+  <div class="absolute inset-0 flex items-center justify-center">
+    <div class="max-w-[1450px] mx-auto w-full px-6">
+      <h1 class=" text-white font-primary text-4xl md:text-[150px] leading-tight md:leading-[0.85] z-10 text-left md:ml-[50px] md:mt-[-80px] md:mb-[15px]">
+        TULE TUULE <br> JUURDE
+      </h1>
+      <button class="flex items-center gap-2 px-[25px] py-[12px] border-2 border-orange-50 text-orange-50 uppercase font-semibold 
+      rounded-full transition hover:bg-orange-600 hover:border-orange-600 hover:text-white  md:ml-[50px]">
+        LOE JUURDE
+        <span class="material-symbols-rounded transition">arrow_forward</span>
+      </button>
+    </div>
+  </div>
+  <div>
+    <img src="/header-overlay.png" class="relative w-[1000px] h-full md:mt-[-585px] md:ml-[950px] object-cover z-20">
+  </div>
+</div>
+
+<!-- NEXT SECTION -->
+<div class="relative max-w-full bg-orange-50 md:h-[600px]">
+</div>
 
 </body>
 {% endblock %}
