@@ -1,13 +1,17 @@
 {% extends 'src/partials/layout.njk' %}
 {% block content %}
-  <body class="bg-primary">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+</head>
+<body class="bg-primary">
 
 {#navchik#}
-<nav id="main-nav" class="fixed top-0 left-0 w-full bg-transparent text-orange-600 transition-all duration-300 z-50">
+<nav id="main-nav" class="fixed top-0 left-0 w-full bg-white text-orange-600 transition-all duration-300 z-50">
   <div class="max-w-[1450px] w-full mx-auto px-6 md:px-14 flex items-center justify-between h-24">
     <img id="nav-logo" src="/RAWA-TUULIK-LOGO.svg" class="md:h-40 h-32 transition-all duration-300">
 
-    <ul class="hidden lg:flex space-x-9 font-medium items-center  text-[16px]" id="nav-links">
+    <ul class="hidden lg:flex space-x-9 font-medium items-center text-[16px]" id="nav-links">
       <li><a href="/">AVALEHT</a></li>
       <li><a href="/merch.html">E-POOD</a></li>
       <li><a href="/contact.html">KONTAKT</a></li>
@@ -32,12 +36,86 @@
   </div>
 </nav>
 
+{#header#}
 <section class="items-justify md:mb-[100px]">
-     <h1 class="relative text-2xl md:text-[64px] leading-tight md:leading-[0.85] text-secondary font-primary text-center mt-[190px] ">
-    TOETA RAVA TUULIKUT</h1>
+     <h1 class="relative text-2xl md:text-[64px] leading-tight md:leading-[0.85] text-secondary font-primary text-center mt-[260px] ">
+     KONTAKTEERU MEIEGA</h1>
      <img src="/element-3.png" class=" w-full md:mt-[-210px]">
 </section>
 
+{#Sektsioon päringuvrom ja info#}
+<section class=" px-6 py-[150px] md:px-24 flex flex-col md:flex-row items-start justify-between md:ml-[180px] md:mt-[-100px]">
 
+<div class="md:ml-[200px] md:mt-[-200px]">
+    <img src="/RAWA-TUULIK-LOGO.svg" alt="Rawa Tuulik Logo" class="w-[300px]" />
+
+    <h2 class="text-[32px] font-primary text-secondary uppercase md:ml-[20px]  md:mt-[-60px]">Kontakt</h2>
+
+    <p class="text-secondary font-semibold md:ml-[20px]">
+      Järva maakond, Järva vald, <br>
+      Rava küla, Möldri.
+    </p>
+
+    <p class="flex items-center text-secondary font-semibold md:ml-[20px]">
+      <span class="material-symbols-rounded mr-2 text-secondary">mail</span>
+      <a href="mailto:info@rawatuulik.com">info@rawatuulik.com</a>
+    </p>
+
+    <p class="flex items-center text-secondary font-semibold md:ml-[20px]">
+      <span class="material-symbols-rounded mr-2 text-secondary">call</span>
+      <a href="tel:+37255551234">+372 5555 1234</a>
+    </p>
+</div>
+
+  {#kontaktorm#}
+  <div class="w-full md:w-[500px] space-y-6 md:mt-[-100px] md:mr-[300px]">
+    <h2 class="text-[32px] font-primary  text-secondary uppercase">Võta ühendust</h2>
+
+    <form class="space-y-4">
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700">Nimi</label>
+        <input type="text" id="name" class="mt-1 block w-full border border-gray-300 rounded-md bg-[#FFFCF5] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-secondary" />
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">E-mail</label>
+        <input type="email" id="email" class="mt-1 block w-full border border-gray-300 rounded-md bg-[#FFFCF5] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-secondary" />
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-700">Küsimus</label>
+        <textarea id="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md bg-[#FFFCF5] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-secondary"></textarea>
+      </div>
+
+      <button type="submit" class="uppercase w-full border-2 border-secondary text-secondary font-semibold py-2 rounded-full hover:bg-secondary hover:text-primary transition">
+        Saada
+      </button>
+    </form>
+  </div>
+</section>
+
+{#kaart#}
+<section class="py-[150px]">
+  <div class="md:ml-[490px] md:mt-[-200px]">
+  <h2 class="text-[32px] font-primary text-secondary uppercase">Asukoht kaardil</h2>
+  </div>
+
+  <div class="w-full md:w-[1000px] h-[600px] md:h-[450px] mt-6 rounded-xl overflow-hidden shadow-lg md:ml-[490px] ">
+  <iframe
+    class="w-full h-full"
+    src="https://www.google.com/maps?q=Järva maakond, Järva vald, Rava küla, Möldri&output=embed"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+ <div class="md:ml-[490px] md:mt-[30px]">
+  <p class="text-[16px] font-secondary text-secondary">Järva maakond, Järva vald, Rava küla, Möldri.</p>
+  </div>
+
+</section>
+   
   </body>
 {% endblock %}

@@ -64,6 +64,11 @@ const webpackConfig = {
             template: './src/pages/merchdetail.njk',
             filename: 'merchdetail.html'
         }),
+
+        new HtmlWebpackPlugin({
+            template: './src/pages/annetus.njk',
+            filename: 'annetus.html'
+        }),
     ],
 }
 
