@@ -1,53 +1,243 @@
 {% extends 'src/partials/layout.njk' %}
 {% block content %}
-  <body class="bg-primary">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+</head>
 
-    </section>
+<body class="bg-primary h-[1200px]">
 
-    <h1 class="relative text-2xl md:text-5xl text-white font-primary text-center mt-[2em] ">
-      SLEEKSNAKES MERCH
-    </h1>
+{#navchik#}
+<nav id="main-nav" class="fixed top-0 left-0 w-full bg-primary text-orange-600 transition-all duration-300 z-50">
+  <div class="max-w-[1450px] w-full mx-auto px-6 md:px-14 flex items-center justify-between h-24">
+    <img id="nav-logo" src="/RAWA-TUULIK-LOGO.svg" class="md:h-40 h-32 transition-all duration-300">
 
-     
-        <div  class="w-9/12 grid grid-cols-2 gap-12 content-center mt-10 ml-16 md:ml-52">
+    <ul class="hidden lg:flex space-x-9 font-medium items-center text-[16px]" id="nav-links">
+      <li><a href="/">AVALEHT</a></li>
+      <li><a href="/merch.html">E-POOD</a></li>
+      <li><a href="/contact.html">KONTAKT</a></li>
+    </ul>
 
-        <div class="1">
-       <a href="merchdetail.html"> <img
-      src="/Group71.png" alt="img"> </a>
-      <h2 class="relative text-l md:text-xl text-white font-primary mt-5"> SLEEKSNAKES KEYCHAIN </h2>
-      <h2 class="relative text-sm md:text-xl text-white font-secondary md:mt-[-1.5em] md:ml-[30em]"> 29.99$ </h2>
+    <div class="hidden lg:flex items-center space-x-4" id="nav-buttons">
+      <a href="/annetus.html"
+         class="border-2 border-orange-600 text-orange-600 rounded-full px-6 py-2 hover:bg-orange-600 hover:text-white transition text-sm font-semibold"
+         id="donate-btn">
+        OLE ABIKS!
+      </a>
+      <button>
+        <img id="cart-icon" src="/CART.svg" class="h-6 md:h-7">
+      </button>
+    </div>
+
+    <button class="lg:hidden z-50" id="hamburger-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="h-6 w-6 text-white" viewBox="0 0 24 24" stroke="currentColor" id="hamburger-icon">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+{#header#}
+<section class="items-justify md:mb-[40px]">
+     <h1 class="relative text-2xl md:text-[64px] leading-tight md:leading-[0.85] text-secondary font-primary text-center mt-[200px] ">
+     TÜKIKE RAVAST <br> KAASA</h1>
+     <img src="/element-3.png" class=" w-full md:mt-[-210px]">
+       <div class="w-[1500px] h-[2.5px] rounded bg-secondary bg-opacity-60 md:ml-[215px]  my-2"></div>
+</section>
+
+{#filtreering#}
+<section class="flex gap-4 md:ml-[280px] mt-6">
+
+  <div class="relative inline-block text-left">
+    <button id="filterToggle" class="inline-flex justify-center items-center px-4 py-2 text-secondary text-[20px] font-medium font-secondary">
+      KÕIK TOOTED
+      <span class="ml-2 material-symbols-rounded">expand_more</span>
+    </button>
+    
+    <div id="filterMenu" class="absolute z-10 mt-2 w-48 origin-top-right rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
+      <div class="py-1 text-secondary font-secondary">
+        <a href="?filter=all" class="block px-4 py-2 text-[18px] hover:bg-orange-100 uppercase">Kõik tooted</a>
+        <a href="?filter=kasitoo" class="block px-4 py-2 text-[18px] hover:bg-orange-100 uppercase">Käsitöö</a>
+        <a href="?filter=maketid" class="block px-4 py-2 text-[18px] hover:bg-orange-100 uppercase">Maketid</a>
       </div>
+    </div>
+  </div>
 
-      <div class="2">
-                <img
-      src="/Rectangle16.png" alt="img">
-      <h2 class="relative  text-l md:text-xl text-white font-primary mt-5"> SLEEKSNAKES HOODIE </h2>
-        <h2 class="relative  text-sm md:text-xl text-white font-secondary md:mt-[-1.5em] md:ml-[30em]"> 45.99$ </h2>
-      </div>
+  <div class="relative inline-block text-left">
+    <button id="sortToggle" class="inline-flex justify-center items-center px-4 py-2 text-secondary text-[20px] font-medium font-secondary ">
+      SORTEERI HINNA JÄRGI
+      <span class="ml-2 material-symbols-rounded">expand_more</span>
+    </button>
 
-             <div class="3">
-       <img
-      src="/Group82.png" alt="img">
-      <h2 class="relative  text-l md:text-xl text-white font-primary mt-5"> SS SOCIETY CAP </h2>
-           <h2 class="relative  text-sm md:text-xl text-white font-secondary md:mt-[-1.5em] md:ml-[30em]"> 34.99$ </h2>
+    <div id="sortMenu" class="absolute z-10 mt-2 w-56 origin-top-right rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
+      <div class="py-1 text-secondary font-secondary">
+        <a href="?sort=asc" class="block px-4 py-2 text-[18px] hover:bg-orange-100 uppercase">Odavam enne</a>
+        <a href="?sort=desc" class="block px-4 py-2 text-[18px] hover:bg-orange-100 uppercase">Kallim enne</a>
       </div>
+    </div>
+  </div>
 
-      <div class="4">
-                <img
-      src="/Rectangle18.png" alt="img">
-      <h2 class="relative md:text-xl text-white font-primary mt-5"> SLEEKSNAKES MOUSEPAD </h2>
-             <h2 class="relative  text-sm md:text-xl text-white font-secondary md:mt-[-1.5em] md:ml-[30em]"> 35.99$ </h2>
+</section>
+
+{#tooted#}
+<section class="h-[1500px]">
+
+  {#rida 1#}
+      <a href="/merchdetail.html">
+      <div class="flex gap-6 justify-center flex-wrap items-center  md:mt-[20px] md:mb-[80px]">
+     <div class="relative h-[390px] w-[430px] bg-gray-600 rounded-md">
+      <img src="/pusa.jpg" class="h-full w-full object-cover rounded-md">
+      <div class="px-4 py-3 text-sm text-gray-800">
+    <div class="flex justify-between items-start">
+      <div class="items-center">
+        <div class="font-semibold text-[20px] text-secondary">Rava Tuuliku Pusa</div>
+        <div class="text-[16px]">Käsitöö</div>
       </div>
+      <div class="text-[24px] md:mt-[5px] font-semibold text-secondary">19,90 €</div>
+    </div>
+  </div>
+    </div>
+  </a>
+    
+
+   <div class="relative h-[390px] w-[430px] bg-gray-600 rounded-md">
+    <img src="/magnet.jpg" class="h-full w-full object-cover rounded-md">
+          <div class="px-4 py-3 text-sm text-gray-800">
+    <div class="flex justify-between items-start">
+      <div class="items-center">
+        <div class="font-semibold text-[20px] text-secondary">Rava Tuuliku Magnet</div>
+        <div class="text-[16px]">Magnetid</div>
+      </div>
+      <div class="text-[24px] md:mt-[5px] font-semibold text-secondary">9,50 €</div>
+    </div>
+  </div>
     </div>
 
 
-    <h1 class="relative text-2xl md:text-5xl text-white font-primary text-center mt-[4em] ">
-      SPONSORS
-    </h1>
-
-       <div class=":w-12/12 items-center mt-[-3em] md:mt-[-20em]">
-       <img
-      src="/Group81.png" alt="img">
+       <div class="relative h-[390px] w-[430px] bg-gray-600 rounded-md">
+    <img src="/kott.jpg" class="h-full w-full object-cover rounded-md">
+          <div class="px-4 py-3 text-sm text-gray-800">
+    <div class="flex justify-between items-start">
+      <div class="items-center">
+        <div class="font-semibold text-[20px] text-secondary">Rava Tuuliku Kangaskott</div>
+        <div class="text-[16px]">Käsitöö</div>
+      </div>
+      <div class="text-[24px] md:mt-[5px] font-semibold text-secondary">16,90 €</div>
     </div>
+  </div>
+    </div>
+
+  {#rida 2#}
+
+        <div class="flex gap-6 justify-center flex-wrap items-center   md:mt-[90px] md:mb-[80px] ">
+     <div class="relative h-[390px] w-[430px] bg-gray-600 rounded-md">
+      <img src="/MILL.jpg" class="h-full w-full object-cover rounded-md">
+            <div class="px-4 py-3 text-sm text-gray-800">
+    <div class="flex justify-between items-start">
+      <div class="items-center">
+        <div class="font-semibold text-[20px] text-secondary">Rava Tuuliku Maketta</div>
+        <div class="text-[16px]">Maketid</div>
+      </div>
+      <div class="text-[24px] md:mt-[5px] font-semibold text-secondary">30 €</div>
+    </div>
+  </div>
+    </div>
+
+   <div class="relative h-[390px] w-[430px] bg-gray-600 rounded-md">
+    <img src="/CAN1.jpg" class="h-full w-full object-cover rounded-md">
+          <div class="px-4 py-3 text-sm text-gray-800">
+    <div class="flex justify-between items-start">
+      <div class="items-center">
+        <div class="font-semibold text-[20px] text-secondary">Mustsõstra Limonaad</div>
+        <div class="text-[16px]">Käsitöö joogid</div>
+      </div>
+      <div class="text-[24px] md:mt-[5px] font-semibold text-secondary">5 €</div>
+    </div>
+  </div>
+    </div>
+
+   <div class="relative h-[390px] w-[430px] bg-gray-600 rounded-md">
+    <img src="/CAN2.jpg" class="h-full w-full object-cover rounded-md">
+          <div class="px-4 py-3 text-sm text-gray-800">
+    <div class="flex justify-between items-start">
+      <div class="items-center">
+        <div class="font-semibold text-[20px] text-secondary">Punasõstra õlu</div>
+        <div class="text-[16px]">Käsitöö joogid</div>
+      </div>
+      <div class="text-[24px] md:mt-[5px] font-semibold text-secondary">7 €</div>
+    </div>
+  </div>
+    </div>
+  
+{#rida 3#}
+
+  <div class="flex gap-6 justify-center flex-wrap items-center  md:mt-[90px] md:mb-[80px]">
+     <div class="relative h-[390px] w-[430px] bg-gray-600 rounded-md">
+      <img src="/MESI.jpg" class="h-full w-full object-cover rounded-md">
+      <div class="px-4 py-3 text-sm text-gray-800">
+    <div class="flex justify-between items-start">
+      <div class="items-center">
+        <div class="font-semibold text-[20px] text-secondary">Klassikaline Mesi</div>
+        <div class="text-[16px]">Käsitöö mesi</div>
+      </div>
+      <div class="text-[24px] md:mt-[5px] font-semibold text-secondary">17 €</div>
+    </div>
+  </div>
+    </div>
+    
+
+   <div class="relative h-[390px] w-[430px] bg-gray-600 rounded-md">
+    <img src="/CAN3.jpg" class="h-full w-full object-cover rounded-md">
+          <div class="px-4 py-3 text-sm text-gray-800">
+    <div class="flex justify-between items-start">
+      <div class="items-center">
+        <div class="font-semibold text-[20px] text-secondary">Astelpaju Mahl</div>
+        <div class="text-[16px]">Käsitöö joogid</div>
+      </div>
+      <div class="text-[24px] md:mt-[5px] font-semibold text-secondary">11,90 €</div>
+    </div>
+  </div>
+    </div>
+
+    <div class="relative h-[390px] w-[430px] bg-gray-600 rounded-md">
+       <img src="/CAN4.jpg" class="h-full w-full object-cover rounded-md">
+             <div class="px-4 py-3 text-sm text-gray-800">
+    <div class="flex justify-between items-start">
+      <div class="items-center">
+        <div class="font-semibold text-[20px] text-secondary">Astelpaju Limonaad</div>
+        <div class="text-[16px]">Käsitöö joogid</div>
+      </div>
+      <div class="text-[24px] md:mt-[5px] font-semibold text-secondary">5 €</div>
+    </div>
+  </div>
+    </div>
+  </div>
+
+  </section>
+
+    <div class="flex justify-center md:mb-[90px]">
+    <button class="flex items-center gap-2 px-[25px] py-[12px] border-2 border-secondary text-secondary uppercase font-semibold 
+      rounded-full transition hover:bg-orange-600 hover:border-orange-600 hover:text-white">
+      LAE JUURDE
+      <span class="material-symbols-rounded transition">arrow_forward</span>
+    </button>
+  </div>
+
+<script>
+  const filterToggle = document.getElementById("filterToggle");
+  const filterMenu = document.getElementById("filterMenu");
+  const sortToggle = document.getElementById("sortToggle");
+  const sortMenu = document.getElementById("sortMenu");
+
+  filterToggle.addEventListener("click", () => {
+    filterMenu.classList.toggle("hidden");
+    sortMenu.classList.add("hidden"); 
+  });
+
+  sortToggle.addEventListener("click", () => {
+    sortMenu.classList.toggle("hidden");
+    filterMenu.classList.add("hidden"); 
+  });
+</script>
+
   </body>
 {% endblock %}

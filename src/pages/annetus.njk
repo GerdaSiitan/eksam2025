@@ -1,6 +1,43 @@
 {% extends 'src/partials/layout.njk' %}
 {% block content %}
   <body class="bg-primary">
-    
+
+{#navchik#}
+<nav id="main-nav" class="fixed top-0 left-0 w-full bg-transparent text-orange-600 transition-all duration-300 z-50">
+  <div class="max-w-[1450px] w-full mx-auto px-6 md:px-14 flex items-center justify-between h-24">
+    <img id="nav-logo" src="/RAWA-TUULIK-LOGO.svg" class="md:h-40 h-32 transition-all duration-300">
+
+    <ul class="hidden lg:flex space-x-9 font-medium items-center  text-[16px]" id="nav-links">
+      <li><a href="/">AVALEHT</a></li>
+      <li><a href="/merch.html">E-POOD</a></li>
+      <li><a href="/contact.html">KONTAKT</a></li>
+    </ul>
+
+    <div class="hidden lg:flex items-center space-x-4" id="nav-buttons">
+      <a href="/annetus.html"
+         class="border-2 border-orange-600 text-orange-600 rounded-full px-6 py-2 hover:bg-orange-600 hover:text-white transition text-sm font-semibold"
+         id="donate-btn">
+        OLE ABIKS!
+      </a>
+      <button>
+        <img id="cart-icon" src="/CART.svg" class="h-6 md:h-7">
+      </button>
+    </div>
+
+    <button class="lg:hidden z-50" id="hamburger-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="h-6 w-6 text-white" viewBox="0 0 24 24" stroke="currentColor" id="hamburger-icon">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<section class="items-justify md:mb-[100px]">
+     <h1 class="relative text-2xl md:text-[64px] leading-tight md:leading-[0.85] text-secondary font-primary text-center mt-[190px] ">
+    TOETA RAVA TUULIKUT</h1>
+     <img src="/element-3.png" class=" w-full md:mt-[-210px]">
+</section>
+
+
   </body>
 {% endblock %}
