@@ -4,12 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        'primary': '#0F0E20',
-        'secondary': '#004236',
+        'primary': '#FFFBF1',
+        'secondary': '#D45115',
         'accent': '#23B930',
       },
       fontFamily: {
-        'primary': ['Sporten Personal Use'],
+        'primary': ['Atelia'],
         'secondary': ['Roboto']
       }
     },
