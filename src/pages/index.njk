@@ -6,12 +6,12 @@
 </head>
 <body class="bg-primary">
 
-{#huge ass nav#}
+{#huge ass uus nav#}
 <nav id="main-nav" class="fixed top-0 left-0 w-full bg-transparent text-white transition-all duration-300 z-50">
   <div class="max-w-[1450px] w-full mx-auto px-6 md:px-14 flex items-center justify-between h-24">
     <img id="nav-logo" src="/RAWA-TUULIK-LOGO.svg" class="md:h-40 h-32 transition-all duration-300">
 
-    <ul class="hidden lg:flex space-x-9 font-medium items-center text-sm" id="nav-links">
+    <ul class="hidden lg:flex space-x-9 font-medium items-center text-[16px]" id="nav-links">
       <li><a href="/">AVALEHT</a></li>
       <li><a href="/merch.html">E-POOD</a></li>
       <li><a href="/contact.html">KONTAKT</a></li>
@@ -23,12 +23,10 @@
          id="donate-btn">
         OLE ABIKS!
       </a>
-<span class="material-symbols-rounded text-[32px] md:text-[36px] transition-all duration-300" id="cart-icon">
-  shopping_bag
-</span>
-
+      <span class="material-symbols-rounded text-[32px] md:text-[36px] transition-all duration-300" id="cart-icon">
+          shopping_bag
+      </span>
     </div>
-
     <button class="lg:hidden z-50" id="hamburger-btn">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="h-6 w-6 text-white" viewBox="0 0 24 24" stroke="currentColor" id="hamburger-icon">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -48,7 +46,7 @@ if (window.location.pathname === "/") {
 
   const updateNav = () => {
     if (window.scrollY > 10) {
-      nav.classList.add("bg-white", "shadow-md");
+      nav.classList.add("bg-orange-50");
       nav.classList.remove("bg-transparent");
 
       donateBtn.classList.add("border-orange-600", "text-orange-600");
@@ -62,8 +60,8 @@ if (window.location.pathname === "/") {
       hamburgerIcon.classList.add("text-orange-600");
       hamburgerIcon.classList.remove("text-white");
 
-      cartIcon.classList.add("text-orange-600");
-      cartIcon.classList.remove("text-white");
+      cartIcon.classList.add("text-secondary");
+      cartIcon.classList.remove("text-primary");
 
       navLogo.src = "/RAWA-TUULIK-LOGO.svg";
     } else {
@@ -79,10 +77,10 @@ if (window.location.pathname === "/") {
       });
 
       hamburgerIcon.classList.remove("text-orange-600");
-      hamburgerIcon.classList.add("text-white");
+      hamburgerIcon.classList.add("text-primary");
 
-      cartIcon.classList.remove("text-orange-600");
-      cartIcon.classList.add("text-white");
+      cartIcon.classList.remove("text-primary");
+      cartIcon.classList.add("text-primary");
 
       navLogo.src = "/RAWA-TUULIK-LOGO_valge.svg";
     }
@@ -95,7 +93,7 @@ if (window.location.pathname === "/") {
 </script>
 
 {#see header#}
-<div class="relative w-full">
+<header class="relative w-full">
   <img src="/header-pic.png" class="w-full h-[900px] md:mt-[-80px] object-cover">
   <div class="absolute inset-0 flex items-center justify-center">
     <div class="max-w-[1450px] mx-auto w-full px-6">
@@ -112,27 +110,147 @@ if (window.location.pathname === "/") {
   <div>
     <img src="/header-overlay.png" class="relative w-[1000px] h-full md:mt-[-585px] md:ml-[950px] object-cover z-20">
   </div>
-</div>
+</header>
 
 
 {#ajalugu#}
-<div class="relative max-w-full bg-orange-50 md:h-[1000px] max-w-[1450px] mx-auto w-full">
+<section class="relative max-w-full bg-primary md:h-[850px] max-w-[1450px] mx-auto w-full">
   <h1 class="font-primary text-orange-600 md:text-[32px] md:ml-[320px] md:pt-[80px]" >NATUKENE RAVA AJALOOST</h1>
-  <div class="w-[1600px] h-[4px] rounded bg-orange-600 md:ml-[315px] my-2"></div>
-  <button class="md:ml-[320px] font-primary text-orange-600 md:text-[48px]" >1554</button>
-  <button class="md:ml-[40px] font-primary text-amber-600 hover:text-orange-600 md:text-[48px]" >1779</button>
-   <button class="md:ml-[40px] font-primary text-amber-600 hover:text-orange-600 md:text-[48px]" >1919</button>
-   <button class="md:ml-[40px] font-primary text-amber-600 hover:text-orange-600 md:text-[48px]" >1936</button>
-   <button class="md:ml-[40px] font-primary text-amber-600 hover:text-orange-600 md:text-[48px]" >PRAEGU</button>
+  <div class="w-[1600px] h-[4px] rounded bg-secondary md:ml-[315px] my-2"></div>
+  <button class="md:ml-[320px] font-primary text-secondary md:text-[48px]" >1554</button>
+  <button class="md:ml-[40px] font-primary text-opacity-75 text-secondary hover:text-secondary md:text-[48px]" >1779</button>
+   <button class="md:ml-[40px] font-primary text-opacity-75  text-secondary hover:text-secondary md:text-[48px]" >1919</button>
+   <button class="md:ml-[40px] font-primary text-opacity-75 text-secondary hover:text-secondary md:text-[48px]" >1936</button>
+   <button class="md:ml-[40px] font-primary text-opacity-75 text-secondary hover:text-secondary md:text-[48px]" >PRAEGU</button>
     <img src="/rava-küla-ajalugu.png" class="relative w-[447px] h-[330px] md:mt-[46px] md:ml-[320px] object-cover rounded-md">
      <h2 class="font-primary text-orange-600 md:text-[32px] md:ml-[830px] md:mt-[-300px]" >Rava Küla</h2>
      <p class="font-sefcondary font-regular text-gray-800 md:text-[16px] md:ml-[830px] md:mt-[10px]" >Aastal 1554 ostis Rava küla Robert Fricks, kelle juhtimisel <br>
      hakati sinna mõisa rajama. Rava mõis (saksa keeles Rawaküll)  <br> rajati 17. sajandi alguses ning selle esimesed omanikud olid  <br>
       Helffreichid. Mõis oli suguvõsa omanduses kuni aastani 1797,  <br> mil selle ostis Georg Friedrich von Stackelberg .  <br>
        <br>Seega, kuigi Rava tuulik ise ei pärine 1554. aastast, on see osa  <br> Rava mõisa ja küla ajaloolisest pärandist, mis ulatub tagasi  <br> vähemalt 16. sajandisse.</p>
+  
+    {#Element sektsioon#}
+        <img src="/element-1.png" class="w-[1900px] h- md:pt-[200px] object-cover">
+</section>
 
+{#Tegelaste sektsioon#}
+<section class="relative max-w-full bg-secondary md:h-[800px] max-w-[1450px] mx-auto w-full">
+
+  <h1 class="font-primary text-primary md:text-[32px] md:ml-[750px] md:pt-[120px]" >NATUKENE RAVA TEGELASTEST</h1>
+  <div class="w-[1600px] h-[4px] rounded bg-primary md:ml-[745px] my-2"></div>
+  <button class="md:ml-[750px] font-primary text-primary md:text-[48px]" >ROBERT FRICKS</button>
+  <button class="md:ml-[40px] font-primary text-opacity-75 text-primary hover:text-primary md:text-[48px]" >GEORG FRIEDRICH</button>
+
+  <p class="font-sefcondary font-regular text-primary md:text-[16px] md:ml-[750px] md:mt-[30px]" >Kuigi Rava tuulik ise ehitati arvatavasti alles 18.–19. sajandil, räägib <br> 
+  rahvapärimus, et Robert Fricks unistas juba oma eluajal suurest kivist tuulikust, <br> mis suudaks teenindada nii mõisa kui ka ümbruskonna talupoegi. Tollel ajal olid <br>
+   enamik veskeid veel puidust ja käsitsi juhitavad, kuid Fricks püüdis tutvustada <br> uuenduslikumaid lähenemisi, mida ta olevat näinud oma reisidel Saksamaal ja <br> Hollandis.
+  <br><br>
+  Legendi järgi olevat ta joonistanud isegi plaani tulevasele tuulikule – nelinurkne <br> 
+  vundament, tugev kivikonstruktsioon ja pöörlev katus. Kuigi tema eluajal see <br>
+  plaan ei teostunud, usuvad mõned, et 18. sajandi lõpus ehitatud Rava tuulik <br> 
+  valmis just tema algse visiooni põhjal, mida olid säilitanud mõisaarhiivid.</p>
+
+  <img src="/Tuulik-SVG.svg" class=" w-[600px] h-[600px] md:ml-[120px] md:mt-[-500px]">
+
+  </section>
+
+
+{#uritused/meened ja koik muu sektsioon#}
+<section class=" max-w-full bg-orange-50 md:h-[1600px] max-w-[1450px] mx-auto w-full">
+
+   {#üritused#}
+   <h1 class="font-primary text-secondary md:text-[32px] md:ml-[320px] md:pt-[80px]" >KALENDER</h1>
+  <div class="w-[1600px] h-[4px] rounded bg-secondary md:ml-[315px] my-2"></div>
+  <button class="md:ml-[320px] font-primary text-secondary md:text-[48px]" >SÜNDMUSED RAVA TUULIKUS</button>
+
+  {#üritused boksid#}
+<div class="flex gap-6 justify-center flex-wrap md:ml-[180px] md:mt-[40px] ">
+   <div class="relative h-[390px] w-[430px] bg-gray-600 rounded-md">
+    <img src="/corgi.jpg" class="h-full w-full object-cover rounded-md" />
+    <div class="absolute bottom-0 left-0 w-full h-[85px] bg-orange-600 rounded-b-md px-4 py-2 flex items-center justify-between text-white">
+      <div class="flex flex-col items-start mr-4 items-center">
+        <span class="text-[28px] font-primary uppercase leading-tight">24</span>
+        <span class="text-sm uppercase leading-none">mai</span>
+      </div>
+      <div class="flex flex-col items-start flex-grow">
+        <span class="text-[24px] font-primary uppercase leading-tight">Corgi päev Ravas</span>
+        <span class="text-[16px] uppercase">Loe rohkem</span>
+      </div>
+      <span class="material-symbols-rounded text-[48px]">arrow_upward</span>
+    </div>
+  </div>
+
+  <div class="relative h-[390px] w-[430px] bg-gray-600 rounded-md">
+    <img src="/tour.jpg" class="h-full w-full object-cover rounded-md">
+    <div class="absolute bottom-0 left-0 w-full h-[85px] bg-orange-600 rounded-b-md px-4 py-2 flex items-center justify-between text-white">
+            <div class="flex flex-col items-start mr-4 items-center">
+        <span class="text-[28px] font-primary uppercase leading-tight">20</span>
+        <span class="text-sm uppercase leading-none">mai</span>
+      </div>
+      <div class="flex flex-col items-start flex-grow">
+        <span class="text-[24px] font-primary uppercase leading-tight">Ekskursioon</span>
+        <span class="text-[16px] uppercase">Loe rohkem</span>
+      </div>
+      <span class="material-symbols-rounded text-[48px]">arrow_upward</span>
+    </div>
+  </div>
+
+  <div class="relative h-[390px] w-[430px] bg-gray-600 rounded-md">
+    <img src="/bron.jpg" class="h-full w-full object-cover rounded-md">
+       <div class="absolute bottom-0 left-0 w-full h-[85px] bg-orange-600 rounded-b-md px-4 py-2 flex items-center justify-between text-white">
+            <div class="flex flex-col items-start mr-4 items-center">
+              <span class="text-[28px] font-primary uppercase leading-tight">1</span>
+              <span class="text-sm uppercase leading-none">jun</span>
+            </div>
+          <div class="flex flex-col items-start flex-grow">
+           <span class="text-[24px] font-primary uppercase leading-tight">Broneeritud</span>
+         <span class="text-[16px] uppercase">Loe rohkem</span>
+        </div>
+        <span class="material-symbols-rounded text-[48px]">arrow_upward</span>
+    </div>
+  </div>
+
+    <div class="h-[390px] flex items-center">
+    <button class="flex items-center gap-2 px-[15px] md:py-[15px] border-2 border-secondary text-secondary uppercase font-semibold 
+      rounded-full transition hover:bg-orange-600 hover:border-orange-600 hover:text-white">
+      <span class="material-symbols-rounded text-[24px]">arrow_forward</span>
+    </button>
+  </div>
 
 </div>
+
+    {#meened#}
+   <h1 class="font-primary text-secondary md:text-[32px] md:ml-[320px] md:pt-[170px]" >TÜKIKE RAVAST ENDAGA KAASAT</h1>
+  <div class="w-[1600px] h-[4px] rounded bg-secondary md:ml-[315px] my-2"></div>
+  <button class="md:ml-[320px] font-primary text-secondary md:text-[48px]" >MEENED</button>
+
+
+    {#üritused boksid#}
+    <div class="flex gap-6 justify-center flex-wrap md:ml-[75px] md:mt-[50px] ">
+     <div class="relative h-[390px] w-[430px] bg-gray-600 rounded-md">
+      <img src="/pusa.jpg" class="h-full w-full object-cover rounded-md">
+    </div>
+
+   <div class="relative h-[390px] w-[430px] bg-gray-600 rounded-md">
+    <img src="/magnet.jpg" class="h-full w-full object-cover rounded-md">
+    </div>
+
+    <div class="relative h-[390px] w-[430px] bg-gray-600 rounded-md">
+       <img src="/kott.jpg" class="h-full w-full object-cover rounded-md">
+    </div>
+  </div>
+
+  <a href="/merch.html">
+   <button class="flex items-center gap-2 px-[25px] py-[12px] border-2 border-secondary text-secondary uppercase font-semibold 
+      rounded-full transition hover:bg-orange-600 hover:border-orange-600 hover:text-white  md:mt-[50px] md:ml-[890px]">
+        VAATA JUURDE
+        <span class="material-symbols-rounded transition">arrow_forward</span>
+      </button>
+    </a>
+
+    <img src="/element-2.png" class=" w-[100px] md:mt-[-1600px]">
+
+  </section>
 
 </body>
 {% endblock %}
