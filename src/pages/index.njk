@@ -6,7 +6,7 @@
 </head>
 <body class="bg-primary">
 
-<!-- NAVBAR -->
+{#huge ass nav#}
 <nav id="main-nav" class="fixed top-0 left-0 w-full bg-transparent text-white transition-all duration-300 z-50">
   <div class="max-w-[1450px] w-full mx-auto px-6 md:px-14 flex items-center justify-between h-24">
     <img id="nav-logo" src="/RAWA-TUULIK-LOGO.svg" class="md:h-40 h-32 transition-all duration-300">
@@ -19,13 +19,14 @@
 
     <div class="hidden lg:flex items-center space-x-4" id="nav-buttons">
       <a href="/annetus.html"
-         class="border-2 border-white text-white rounded-full px-6 py-2 hover:bg-orange-600 hover:text-white transition text-sm font-semibold"
+         class="border-2 border-white text-white rounded-full px-6 py-2 hover:bg-orange-600 hover:border-orange-600 hover:text-white transition text-sm font-semibold"
          id="donate-btn">
         OLE ABIKS!
       </a>
-      <button>
-        <img id="cart-icon" src="/CART.svg" class="h-6 md:h-7">
-      </button>
+<span class="material-symbols-rounded text-[32px] md:text-[36px] transition-all duration-300" id="cart-icon">
+  shopping_bag
+</span>
+
     </div>
 
     <button class="lg:hidden z-50" id="hamburger-btn">
@@ -37,56 +38,68 @@
 </nav>
 
 <script>
-  if (window.location.pathname === "/") {
-    const nav = document.getElementById("main-nav");
-    const navLinks = document.getElementById("nav-links");
-    const donateBtn = document.getElementById("donate-btn");
-    const cartIcon = document.getElementById("cart-icon");
-    const hamburgerIcon = document.getElementById("hamburger-icon");
+if (window.location.pathname === "/") {
+  const nav = document.getElementById("main-nav");
+  const navLinks = document.getElementById("nav-links");
+  const donateBtn = document.getElementById("donate-btn");
+  const hamburgerIcon = document.getElementById("hamburger-icon");
+  const navLogo = document.getElementById("nav-logo");
+  const cartIcon = document.getElementById("cart-icon");
 
-    const updateNav = () => {
-      if (window.scrollY > 10) {
-        nav.classList.add("bg-white", "shadow-md");
-        nav.classList.remove("bg-transparent");
+  const updateNav = () => {
+    if (window.scrollY > 10) {
+      nav.classList.add("bg-white", "shadow-md");
+      nav.classList.remove("bg-transparent");
 
-        donateBtn.classList.add("border-orange-600", "text-orange-600");
-        donateBtn.classList.remove("border-white", "text-white");
+      donateBtn.classList.add("border-orange-600", "text-orange-600");
+      donateBtn.classList.remove("border-white", "text-white");
 
-        navLinks.querySelectorAll("a").forEach(link => {
-          link.classList.add("text-orange-600");
-          link.classList.remove("text-white");
-        });
+      navLinks.querySelectorAll("a").forEach(link => {
+        link.classList.add("text-orange-600");
+        link.classList.remove("text-white");
+      });
 
-        hamburgerIcon.classList.add("text-orange-600");
-        hamburgerIcon.classList.remove("text-white");
-      } else {
-        nav.classList.remove("bg-white", "shadow-md");
-        nav.classList.add("bg-transparent");
+      hamburgerIcon.classList.add("text-orange-600");
+      hamburgerIcon.classList.remove("text-white");
 
-        donateBtn.classList.remove("border-orange-600", "text-orange-600");
-        donateBtn.classList.add("border-white", "text-white");
+      cartIcon.classList.add("text-orange-600");
+      cartIcon.classList.remove("text-white");
 
-        navLinks.querySelectorAll("a").forEach(link => {
-          link.classList.remove("text-orange-600");
-          link.classList.add("text-white");
-        });
+      navLogo.src = "/RAWA-TUULIK-LOGO.svg";
+    } else {
+      nav.classList.remove("bg-white", "shadow-md");
+      nav.classList.add("bg-transparent");
 
-        hamburgerIcon.classList.remove("text-orange-600");
-        hamburgerIcon.classList.add("text-white");
-      }
-    };
+      donateBtn.classList.remove("border-orange-600", "text-orange-600");
+      donateBtn.classList.add("border-white", "text-white");
 
-    window.addEventListener("scroll", updateNav);
-    document.addEventListener("DOMContentLoaded", updateNav);
-  }
+      navLinks.querySelectorAll("a").forEach(link => {
+        link.classList.remove("text-orange-600");
+        link.classList.add("text-white");
+      });
+
+      hamburgerIcon.classList.remove("text-orange-600");
+      hamburgerIcon.classList.add("text-white");
+
+      cartIcon.classList.remove("text-orange-600");
+      cartIcon.classList.add("text-white");
+
+      navLogo.src = "/RAWA-TUULIK-LOGO_valge.svg";
+    }
+  };
+
+  window.addEventListener("scroll", updateNav);
+  document.addEventListener("DOMContentLoaded", updateNav);
+}
+
 </script>
 
-<!-- HEADER SECTION -->
+{#see header#}
 <div class="relative w-full">
   <img src="/header-pic.png" class="w-full h-[900px] md:mt-[-80px] object-cover">
   <div class="absolute inset-0 flex items-center justify-center">
     <div class="max-w-[1450px] mx-auto w-full px-6">
-      <h1 class=" text-white font-primary text-4xl md:text-[150px] leading-tight md:leading-[0.85] z-10 text-left md:ml-[50px] md:mt-[-80px] md:mb-[15px]">
+      <h1 class=" text-white font-primary text-4xl md:text-[150px] leading-tight md:leading-[0.85] z-10 text-left md:ml-[50px] md:mt-[30px] md:mb-[17px]">
         TULE TUULE <br> JUURDE
       </h1>
       <button class="flex items-center gap-2 px-[25px] py-[12px] border-2 border-orange-50 text-orange-50 uppercase font-semibold 
@@ -101,8 +114,24 @@
   </div>
 </div>
 
-<!-- NEXT SECTION -->
-<div class="relative max-w-full bg-orange-50 md:h-[600px]">
+
+{#ajalugu#}
+<div class="relative max-w-full bg-orange-50 md:h-[1000px] max-w-[1450px] mx-auto w-full">
+  <h1 class="font-primary text-orange-600 md:text-[32px] md:ml-[320px] md:pt-[80px]" >NATUKENE RAVA AJALOOST</h1>
+  <div class="w-[1600px] h-[4px] rounded bg-orange-600 md:ml-[315px] my-2"></div>
+  <button class="md:ml-[320px] font-primary text-orange-600 md:text-[48px]" >1554</button>
+  <button class="md:ml-[40px] font-primary text-amber-600 hover:text-orange-600 md:text-[48px]" >1779</button>
+   <button class="md:ml-[40px] font-primary text-amber-600 hover:text-orange-600 md:text-[48px]" >1919</button>
+   <button class="md:ml-[40px] font-primary text-amber-600 hover:text-orange-600 md:text-[48px]" >1936</button>
+   <button class="md:ml-[40px] font-primary text-amber-600 hover:text-orange-600 md:text-[48px]" >PRAEGU</button>
+    <img src="/rava-küla-ajalugu.png" class="relative w-[447px] h-[330px] md:mt-[46px] md:ml-[320px] object-cover rounded-md">
+     <h2 class="font-primary text-orange-600 md:text-[32px] md:ml-[830px] md:mt-[-300px]" >Rava Küla</h2>
+     <p class="font-sefcondary font-regular text-gray-800 md:text-[16px] md:ml-[830px] md:mt-[10px]" >Aastal 1554 ostis Rava küla Robert Fricks, kelle juhtimisel <br>
+     hakati sinna mõisa rajama. Rava mõis (saksa keeles Rawaküll)  <br> rajati 17. sajandi alguses ning selle esimesed omanikud olid  <br>
+      Helffreichid. Mõis oli suguvõsa omanduses kuni aastani 1797,  <br> mil selle ostis Georg Friedrich von Stackelberg .  <br>
+       <br>Seega, kuigi Rava tuulik ise ei pärine 1554. aastast, on see osa  <br> Rava mõisa ja küla ajaloolisest pärandist, mis ulatub tagasi  <br> vähemalt 16. sajandisse.</p>
+
+
 </div>
 
 </body>

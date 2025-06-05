@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
 </head>
-<body>
+<body class="bg-white text-black">
+ <div class="max-w-[1920px] mx-auto w-full overflow-hidden">
     {% block content %} {% endblock %}
-     {% include 'src/partials/footer.njk' %}
+    {% include 'src/partials/footer.njk' %}
+  </div>
 </body>
 </html>
