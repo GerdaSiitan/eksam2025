@@ -107,71 +107,80 @@
 </script>
 
 {#toote page ja info#}
-<section class="bg-primary h-[1000px] md:mt-[-100px] md:pt-[70px]">
-  <div class="relative h-[538px] w-[685px] bg-gray-600 rounded-md md:mt-[165px] md:ml-[320px]">
+<section class=" md:mt-[30px] md:pt-[-90px] pt-[100px]  md:h-[900px] h-[1000px]">
+  <div class="flex flex-col md:flex-row md:items-start items-center">
+    <div class="relative md:h-[538px] h-[265px] md:w-[685px] w-[335px] bg-gray-600 rounded-md md:mt-[165px] md:ml-[320px] hidden md:block">
     <img src="/pusa.jpg" class="h-full w-full object-cover rounded-md">
     </div>
 
+     <div class="mt-8 md:mt-[165px] md:ml-[40px] max-w-[500px] px-4 md:px-0">
 
     {#title#}
-    <p class="text-[16px] text-gray-600  md:ml-[1050px]  md:mt-[-500px]">Käsitöö</p>
-    <h1 class="text-[48px] font-extrabold text-secondary  md:ml-[1050px]  md:mt-[-10px]">Rava Tuuliku Pusa</h1>
+    <p class="text-[16px] text-gray-600">Käsitöö</p>
+      <h1 class="text-[32px] md:text-[48px] font-extrabold text-secondary mt-1">Rava Tuuliku Pusa</h1>
+      <p class="text-[16px] text-gray-700 mt-2">
+        Stiilne ja mugav T-särk. Valmistatud pehmest <br class="hidden md:block">
+        puuvillast ning sobib ideaalselt nii kingituseks kui <br class="hidden md:block">
+        igapäevaseks kandmiseks. Kujundus on loodud <br class="hidden md:block">
+        kohapeal – lihtne, ajatu ja uhkelt eestimaine.
+      </p>
 
-    <p class="text-[16px] text-gray-700  md:ml-[1050px]  md:mt-[10px]">
-      Stiilne ja mugav T-särk. Valmistatud pehmest <br> puuvillast ning sobib ideaalselt nii kingituseks kui <br>
-      igapäevaseks kandmiseks. Kujundus on loodud <br> kohapeal – lihtne, ajatu ja uhkelt eestimaine.
-    </p>
+          <div class="relative md:h-[538px] h-[265px] md:w-[685px] w-[335px] bg-gray-600 rounded-md md:mt-[165px] md:ml-[320px] block md:hidden">
+    <img src="/pusa.jpg" class="h-full w-full object-cover rounded-md">
+    </div>
+      
 
     {#värvid ja suurus#}
-    <div class="flex justify-between mb-4  md:ml-[1050px] md:mt-[20px]">
-      <div>
-        <p class="text-[16px] mb-1">Toote värv: <span class="font-medium">Must</span></p>
-        <div class="flex space-x-2">
-          <span class="w-[55px] h-[55px] rounded-full border-2 hover:border-secondary bg-black"></span>
-          <span class="w-[55px] h-[55px] rounded-full border-2 hover:border-secondary bg-gray-300"></span>
-          <span class="w-[55px] h-[55px] rounded-full border-2 hover:border-secondary border-[#d94f1a] bg-[#d94f1a]"></span>
+     <div class="flex flex-col md:flex-row justify-between gap-4 mt-6">
+        <div>
+          <p class="text-[16px] mb-1">Toote värv: <span class="font-medium">Must</span></p>
+          <div class="flex space-x-2">
+            <span class="w-[40px] h-[40px] md:w-[55px] md:h-[55px] rounded-full border-2 hover:border-secondary bg-black"></span>
+            <span class="w-[40px] h-[40px] md:w-[55px] md:h-[55px] rounded-full border-2 hover:border-secondary bg-gray-300"></span>
+            <span class="w-[40px] h-[40px] md:w-[55px] md:h-[55px] rounded-full border-2 hover:border-secondary border-[#d94f1a] bg-[#d94f1a]"></span>
+          </div>
         </div>
-      </div>
 
-      <div class="md:mr-[350px] md:mt-[2px]">
-        <p class="text-[16px] mb-1">Toote suurus: <span class="font-medium">S</span></p>
-        <div class="flex space-x-2">
-          <button class="w-[55px] h-[55px] rounded-full border-2 hover:border-secondary text-[24px] font-medium">S</button>
-          <button class="w-[55px] h-[55px] rounded-full border-2 hover:border-secondary text-[24px] font-medium">M</button>
-          <button class="w-[55px] h-[55px] rounded-full border-2 hover:border-secondary text-[24px] font-medium">L</button>
-          <button class="w-[55px] h-[55px] rounded-full border-2 hover:border-secondary  text-[24px] font-medium">XL</button>
+       <div>
+          <p class="text-[16px] mb-1">Toote suurus: <span class="font-medium">S</span></p>
+          <div class="flex space-x-2">
+            <button class="w-[40px] h-[40px] md:w-[55px] md:h-[55px] rounded-full border-2 hover:border-secondary text-[18px] md:text-[24px] font-medium">S</button>
+            <button class="w-[40px] h-[40px] md:w-[55px] md:h-[55px] rounded-full border-2 hover:border-secondary text-[18px] md:text-[24px] font-medium">M</button>
+            <button class="w-[40px] h-[40px] md:w-[55px] md:h-[55px] rounded-full border-2 hover:border-secondary text-[18px] md:text-[24px] font-medium">L</button>
+            <button class="w-[40px] h-[40px] md:w-[55px] md:h-[55px] rounded-full border-2 hover:border-secondary text-[18px] md:text-[24px] font-medium">XL</button>
+          </div>
         </div>
       </div>
-    </div>
 
     {#hind#}
-    <div class=" md:ml-[1050px] md:mt-[30px]">
-    <p class="text-[16px] font-regular md:mt-[60px]">Hind</p>
-    <p class="text-[40px] font-bold text-secondary  md:mt-[-10px]">19,90 €</p>
-    </div>
+     <div class="mt-6">
+        <p class="text-[16px] font-regular">Hind</p>
+        <p class="text-[32px] md:text-[40px] font-bold text-secondary -mt-1">19,90 €</p>
+      </div>
+
 
     {#nupp#}
-    <div class="md:ml-[1050px] md:mt-[20px]">
-    <button class="w-[500px] border-2 border-secondary text-secondary font-semibold py-2 rounded-3xl flex items-center justify-center space-x-2 hover:bg-[#d94f1a] hover:text-white transition">
-      <span class="material-symbols-rounded text-[32px] md:text-[36px] transition-all duration-300" id="cart-icon">
-          shopping_bag
-      </span>
-      <span>LISA OSTUKORVI</span>
-    </button>
+     <div class="mt-6">
+        <button class="w-full md:w-[500px] border-2 border-secondary text-secondary font-semibold py-2 rounded-3xl flex items-center justify-center space-x-2 hover:bg-[#d94f1a] hover:text-white transition">
+          <span class="material-symbols-rounded text-[28px] md:text-[36px]">shopping_bag</span>
+          <span>LISA OSTUKORVI</span>
+        </button>
+      </div>
+    </div>
   </div>
 
   {#alumised pildid#}
-  <div class="flex gap-2 justify-center flex-wrap items-center md:mt-[1px] md:ml-[-1050px] ">
-    <div class="relative h-[92px] w-[104px] bg-gray-600 rounded-md">
+ <div class="flex gap-2 justify-center flex-wrap items-center md:mt-[1px] md:ml-[-1050px]">
+    <div class="relative h-[92px] w-[104px] bg-gray-600 rounded-md  hidden md:block ">
     <img src="/pusa1.jpg" class="h-full w-full object-cover rounded-md">
     </div>
 
-    <div class="relative h-[92px] w-[104px] bg-gray-600 rounded-md ">
+    <div class="relative h-[92px] w-[104px] bg-gray-600 rounded-md hidden md:block ">
     <img src="/pusa2.jpg" class="h-full w-full object-cover rounded-md">
     </div>
-    </div>
+  </div>
 
-  </section>
+    </section>
 
 
   </body>
